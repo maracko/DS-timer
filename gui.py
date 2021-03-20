@@ -12,11 +12,12 @@ from threading import Timer
 
 SETTINGS_FILE = Path(__file__).parent / "settings.cfg"
 ICON_FILE = Path(__file__).parent / "resources" / "DS.ico"
-
 ICON = str(ICON_FILE)
+
 ##Base64 version of icon for the tray
 icon = ICON_FILE.read_bytes()
 base64_icon = base64.b64encode(icon)
+
 
 DEFAULT_SETTINGS = {
     "start_timer_sound": str(Path(__file__).parent / "resources" / "Start.wav"),
